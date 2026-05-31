@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f6efef;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            background: #dad4d4;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+            color: #434343;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, select, button {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #e7e3e3;
+        }
+        button {
+            background:blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Book an Appointment</h2>
+        <form action="appointmentbook.php" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="doctor">Choose Doctor:</label>
+            <select name="doctor" id="doctor" required>
+                <option value="1">Dr. Bhupendra Kumar Basnet (Cardiologist)</option>
+                <option value="2">Dr. Prashant Mishra (Oncology)</option>
+                <option value="3">Dr. Vidhata Bhandari (Dermatologist)</option>
+                <option value="4">Dr. Bharat Khadka (Psychiatry)</option>
+                <option value="5">Dr. Alan Smith (Pediatrics )</option>
+                <option value="6">Dr. Mala Shrestha(Gynaecology)</option>
+                <option value="7">Dr. Radha Rana (Orthopedics)</option>
+            </select>
+
+            <label for="appointment_time">Choose Appointment Time:</label>
+            <input type="datetime-local" name="appointment_time" id="appointment_time" required>
+            
+            <label for="appointmentTime">Appointment Time:</label>
+            <input type="time" id="appointmentTime" required><br> 
+
+            <button type="submit">Book Appointment</button>
+        </form>
+    </div>
+</body>
+</html>

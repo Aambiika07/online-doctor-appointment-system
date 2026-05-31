@@ -1,0 +1,37 @@
+.welcome-container {
+    display: flex;             /* Use flexbox for layout */
+    align-items: center;      /* Vertically align items */
+    /* Add any other styling you want for the container */
+    padding: 20px;         /* Example padding */
+    border: 1px solid #ccc; /* Example border */
+}
+
+.image-area {
+    width: 100px;           /* Set a fixed width for the image area */
+    margin-right: 20px;    /* Add spacing between image and text */
+}
+
+.welcome-message {
+    flex: 1;                /* Allow the message to take up remaining space */
+}
+
+.welcome-title {
+    font-size: 24px;       /* Example font size */
+    font-weight: bold;    /* Example font weight */
+    margin-bottom: 10px;   /* Example spacing */
+}
+
+.welcome-text {
+    font-size: 16px;       /* Example font size */
+    line-height: 1.5;      /* Example line height */
+}
+
+.view-appointments {
+    /* Style your button as needed */
+    background-color: #007bff; /* Example blue button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

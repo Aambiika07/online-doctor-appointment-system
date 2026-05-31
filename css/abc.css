@@ -1,0 +1,129 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+    color: #333;
+}
+
+.dashboard-container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.dashboard-container h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+/* Card Styles */
+.card {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    background: #007bff;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.card p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Recent Appointments Section */
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background: #007bff;
+    color: #fff;
+}
+
+thead th {
+    padding: 15px;
+    text-align: left;
+}
+
+tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+tbody td {
+    padding: 15px;
+    text-align: left;
+    color: #555;
+}
+
+tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+tbody tr:hover {
+    background: #f1f1f1;
+}
+
+tbody td:last-child {
+    font-weight: bold;
+}
+
+tbody td:nth-child(5) {
+    text-transform: capitalize;
+}
+
+/* Status Color Coding */
+tbody tr td:nth-child(5):contains("Completed") {
+    color: green;
+}
+
+tbody tr td:nth-child(5):contains("Pending") {
+    color: orange;
+}
+
+tbody tr td:nth-child(5):contains("Canceled") {
+    color: red;
+}

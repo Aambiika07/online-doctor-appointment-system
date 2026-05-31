@@ -1,0 +1,12 @@
+
+function togglePassword() {
+    const passwordInput = document.getElementById('userpassword');
+    const toggleButton = document.querySelector('.toggle-password');
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        toggleButton.textContent = 'Hide';
+    } else {
+        passwordInput.type = 'password';
+        toggleButton.textContent = 'Show';
+    }
+}

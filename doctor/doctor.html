@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard</title>
+    <link rel="stylesheet" href="doctor.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <form action="doctor.php"></form>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="alan.jpg" alt="Doctor Profile Picture" class="profile-pic">
+                <h3>Bhupendra</h3>
+                <p>doctor123</p>
+                <a href="logout.php" class="logout-btn">Log out</a>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="doctor.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="appointments.html"><i class="fas fa-calendar-alt"></i> My Appointments</a></li>
+                    <li><a href="sessions.html"><i class="fas fa-calendar-check"></i> My Sessions</a></li>
+                    <li><a href="patients.html"><i class="fas fa-users"></i> My Patients</a></li>
+                    <li><a href="settings.html"><i class="fas fa-cogs"></i> Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <h1>Dashboard</h1>
+                <div class="date">
+                    <p>Today's Date</p>
+                    <span>2022-06-03</span>
+                </div>
+            </header>
+
+            <section class="welcome">
+                <h2>Welcome!</h2>
+                <p>
+                    Thanks for joining with us. We are always trying to get you a complete service. 
+                    You can view your daily schedule, reach patient appointments at home!
+                </p>
+                <button>View My Appointments</button>
+            </section>
+
+            <section class="status">
+                <div class="status-card">
+                    <h3>1</h3>
+                    <p>All Doctors</p>
+                </div>
+                <div class="status-card">
+                    <h3>2</h3>
+                    <p>All Patients</p>
+                </div>
+                <div class="status-card">
+                    <h3>1</h3>
+                    <p>New Booking</p>
+                </div>
+                <div class="status-card">
+                    <h3>0</h3>
+                    <p>Today's Sessions</p>
+                </div>
+            </section>
+
+            <section class="sessions">
+                <h2>Your Upcoming Sessions until Next Week</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Session Title</th>
+                            <th>Scheduled Date</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="3"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
