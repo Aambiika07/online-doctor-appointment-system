@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="patient.css">
+</head>
+<body>
+    <form action="patient.php" method="POSt"></form>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="" alt="Profile Image" class="profile-pic">
+                <h3>Test Patient</h3>
+                <p>patient123</p>
+                <a href="logout.php" class="logout-btn">Log out</a>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="patient.html"><i class="fas fa-tachometer-alt"></i> Home</a></li>
+                    <li><a href="doctors.html"><i class="fas fa-user-md"></i> All Doctors</a></li>
+                    <li><a href="sessions.html"><i class="fas fa-calendar-check"></i> Scheduled Sessions</a></li>
+                    <li><a href="bookings.html"><i class="fas fa-bookmark"></i> My Bookings</a></li>
+                    <li><a href="settings.html"><i class="fas fa-cogs"></i> Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <h1>Welcome.</h1>
+                <div class="date">
+                  
+                </div>
+            </header>
+
+            <section class="status">
+                <div class="status-card">
+                    <h3>10</h3>
+                    <p>All Doctors</p>
+                </div>
+                <div class="status-card">
+                    <h3>5</h3>
+                    <p>New Bookings</p>
+                </div>
+                <div class="status-card">
+                    <h3>50</h3>
+                    <p>All Patients</p>
+                </div>
+                <div class="status-card">
+                    <h3>2</h3>
+                    <p>Today Sessions</p>
+                </div>
+            </section>
+
+            <section class="upcoming-booking">
+                <h2>Your Upcoming Booking</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Appointment Number</th>
+                            <th>Session Title</th>
+                            <th>Doctor</th>
+                            <th>Scheduled Date & Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2222</td>
+                            <td>Consultation</td>
+                            <td>Dr. Alan </td>
+                            <td>2024-12-05 10:00 AM</td>
+                        </tr>
+                        <tr>
+                            <td>5623</td>
+                            <td>Check-up</td>
+                            <td>Dr. Bhupendra </td>
+                            <td>2024-12-06 03:00 PM</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
