@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - HealthCare</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .register-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        .register-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .register-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .register-container input {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .register-container button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .register-container button:hover {
+            background-color: #218838;
+        }
+
+        .register-container .login-link {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .register-container .login-link a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .register-container .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        .role-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .role-group label {
+            margin-left: 5px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2>Register for HealthCare</h2>
+        <form action="register.php" method="POST">
+            
+            <label for="Fullname">Fullname:</label>
+            <input type="text" id="Fullname" name="Fullname" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <div class="role-group">
+                <input type="radio" id="doctor" name="role" value="doctor" required>
+                <label for="doctor">Doctor</label>
+                <input type="radio" id="patient" name="role" value="patient" required>
+                <label for="patient">Patient</label>
+            </div>
+            
+
+            <button type="submit">Register</button>
+        </form>
+                
+        <div class="login-link">
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to Online Doctor Appointment System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9e9e9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background: #e0dcdc;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #070707;
+        }
+
+        .login-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-container input {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #fbf0f0;
+            border-radius: 5px;
+        }
+
+        .login-container button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #fa33f6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-container button:hover {
+            background-color: #710cdd;
+        }
+
+        .login-container .register-link {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .login-container .register-link a {
+            color: #1581f5;
+            text-decoration: none;
+        }
+
+        .login-container .register-link a:hover {
+            text-decoration: underline;
+        }
+        
+    </style>
+</head>
+<body>
+    <script>
+        setTimeout(() => {
+            window.location.href = "login.html";
+        }, 1000);
+    </script>
+    <div class="login-container">
+        <h2>Login to HealthCare</h2>
+        <form action="login.php" method="POST">
+
+                <td class="label-td">
+                    <label for="useremail" class="form-label">Email: </label>
+                </td>
+            </tr>
+            <tr>
+                <td class="label-td">
+                    <input type="email" name="useremail" class="input-text" placeholder="Email Address" required>
+                </td>
+            </tr>
+            <tr>
+                <td class="label-td">
+                    <label for="userpassword" class="form-label">Password: </label>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label-td">
+                    <input type="Password" name="userpassword" class="input-text" placeholder="Password" required>
+                </td>
+            </tr>
+        
+        <div class="register-link">
+            <p>Don't have an account? <a href="signup.php">Register here</a></p>
+        </div>
+    </div>
+</body>
+</html>

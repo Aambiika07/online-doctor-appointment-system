@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="admin-profile">
+                <h3><?php echo htmlspecialchars($patient['name']); ?></h3>
+                <p><?php echo htmlspecialchars($patient['email']); ?></p>
+                <button class="logout-btn" onclick="window.location.href='logout.php'">Log out</button>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="patientdashboard.php">Home</a></li>
+                    <li><a href="alldoctors.php">All Doctors</a></li>
+                    <li><a href="sessions.php">Scheduled Sessions</a></li>
+                    <li><a href="mybookings.php">My Bookings</a></li>
+                    <li><a href="settings.php">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h2>Welcome, <?php echo htmlspecialchars($patient['name']); ?></h2>
+                <p>Track your past and future appointments. Find expected arrival times for your doctor.</p>
+            </header>
+
+            <section class="status-section">
+                <div class="status-card"><?php echo $status['doctors']; ?><br>All Doctors</div>
+                <div class="status-card"><?php echo $status['patients']; ?><br>All Patients</div>
+                <div class="status-card"><?php echo $status['new_bookings']; ?><br>New Booking</div>
+                <div class="status-card"><?php echo $status['today_sessions']; ?><br>Today Sessions</div>
+            </section>
+
+            <section class="appointments">
+                <h2>Your Upcoming Bookings</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Appoint. Number</th>
+                            <th>Session Title</th>
+                            <th>Doctor</th>
+                            <th>Scheduled Date & Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        if ($result_appointments->num_rows > 0) {
+                            while ($row = $result_appointments->fetch_assoc()) {
+                                echo "<tr>
+                                    <td>{$row['appointment_id']}</td>
+                                    <td>{$row['session_title']}</td>
+                                    <td>{$row['doctor_name']}</td>
+                                    <td>{$row['appointment_time']}</td>
+                                </tr>";
+                            }
+                        } else {
+                            echo "<tr><td colspan='4'>No upcoming bookings</td></tr>";
+                        }
+                        ?>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
